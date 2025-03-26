@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+    color: blue;/* Set text color to red */
+  }
+  h1, h2, p {
+    text-align: center;
+    color: red;
+  }
+p {
+    color: red;
+    text-align: center;
+  }
+  #para1 {
+    text-align: center;
+    color: red;
+  }
+  .center {
+    text-align: center;
+    color: red;
+  }
+  p.center {
+    text-align: center;
+    color: red;
+  }
+  body {
+    background-color: #ffffff;
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  p {
+    margin: 25px 50px 75px 100px;
+  }
+  div {
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+  }
