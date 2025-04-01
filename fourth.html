@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img {
-            /*float:right*/
-            float: right;
-        }
-        div{
+        .float{
+            float:right
+            }
+        div{ 
             float:left;
         }
         .div1{
@@ -53,10 +52,53 @@
             width: 100px;
             background-color: rgb(48, 186, 41);
         }
+        .center{
+            width:60%;
+            height: 100px;
+            border: 2px solid palevioletred;
+            margin: auto;
+            text-align: center;
+        }
+        #center-align{
+            width : 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .position-right{
+            position: relative;
+            right: 0px;
+            left: 200px;
+            width:100px;
+            height: 100px;
+            border: 2px solid palevioletred;
+        }
+        .combinators p{
+            background-color: chartreuse;
+        }
+        .combinators > p{
+            background-color: chocolate;
+        }
+        .combinators +p{
+            background-color: blue;
+        }
+        .combinators ~p{
+            background-color: crimson;
+        }
+        div:hover {
+        background-color: blue;
+        }
+        .cl::first-letter{
+            font-size: 20px;
+            color: blue;
+        }
+        .cl::before{
+            content: "HI";
+        }
     </style>
 </head>
 <body>
-    <img src="img.jpg" alt="image loading" style="width:180px;height:180px;">
+    <img class="float" src="img.jpg" alt="image loading" style="width:180px;height:180px;">
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, quibusdam corrupti deserunt hic eum adipisci ducimus reprehenderit est, repellat obcaecati saepe doloribus sed vitae nisi voluptatum pariatur, tempora maiores veniam.</p>
     
         <div class="div1">Div1</div>
@@ -71,5 +113,15 @@
         </div>
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur eaque cumque tempore. Vitae sunt eligendi illo pariatur exercitationem id, mollitia corrupti veritatis excepturi dignissimos <span class="a">distinctio,</span> <span class="b">odio</span>odio accusantium vero expedita earum.
     </div>
+    <div class="center"><p>Hi Good morning</p></div>
+    <img id="center-align" src="img.jpg" alt="image">
+    <div class="position-right"><p>Hi Good morning</p></div>
+
+    <div class="combinators">
+        <p>Paragraph 1</p>
+        <p>paragraph 2</p>
+    </div>
+    <p>paragraph3</p>
+    <p>paragraph 4</p>
 </body>
 </html>
