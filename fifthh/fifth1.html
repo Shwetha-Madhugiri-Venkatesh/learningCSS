@@ -33,7 +33,80 @@ body {
   width: 200px;
   height: 150px;  
 }
+.transition{
+  width:100px;
+  height: 100px;
+  display: block;
+  margin-top: 30px;
+  background-color: blueviolet;
+  transition: width 2s, height 2s, transform 2s;
+}
 
+.transition:hover{
+  width:200px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+.translate{
+  width:100px;
+  height: 100px;
+  display: block;
+  margin-top: 30px;
+  background-color: red;
+  transition: 2s;
+}
+.translate:hover{
+  transform: translate(50px, 100px);
+}
+.rotate{
+  width:100px;
+  height: 100px;
+  display: block;
+  margin-top: 30px;
+  background-color: green;
+  transition: 2s;
+}
+.rotate:hover{
+  transform: rotate(180deg);
+}
+
+.skew{
+  width:100px;
+  height: 100px;
+  display: block;
+  margin-top: 30px;
+  background-color: rgb(119, 128, 0);
+  transition: 2s;
+}
+
+.skew:hover{
+  transform: skew(50deg);
+}
+
+.scale{
+  width:100px;
+  height: 100px;
+  display:inline-block;
+  margin-top: 30px;
+  background-color: rgb(0, 83, 128);
+  transition: 2s;
+}
+
+.scale:hover{
+  transform: scale(2,1);
+}
+.matrix{
+  /*matrix(scaleX(), skewX(), skewY(), scaleY(), translateX(), translateY())*/
+  width:100px;
+  height: 100px;
+  display:block;
+  margin-top: 30px;
+  background-color: rgb(60, 9, 9);
+  transition: 2s;
+}
+.matrix:hover{
+  transform: matrix(2, -1, 1, 2, 100, 100);
+}
 </style>
 </head>
 <body>
@@ -47,5 +120,11 @@ body {
 <p>Rounded corners for an element with a background image:</p>
 <p id="rcorners3">Rounded corners!</p>
 
+<div class="transition"></div>
+<div class="translate"></div>
+<div class="rotate"></div>
+<div class="skew"></div>
+<div class="scale"></div>
+<div class="matrix"></div>
 </body>
 </html>
